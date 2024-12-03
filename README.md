@@ -1,24 +1,23 @@
-# Ghi chú thiết kế FIR/IIR Filter
+# FIR/IIR Filter Design Notes  
 
-## 1. Mô tả hệ thống
+## 1. System Description  
 
-**FIR**
+**FIR**  
+- Filter Type: Low-pass  
+- Cut-off Frequency: 100 Hz  
+- Sampling Frequency: 1 kHz  
+- Order: 50  
 
-- Loại bộ lọc: Thông thấp (Low-pass)
-- Tần số cắt: 100 Hz
-- Tần số lấy mẫu: 1 kHz
-- Bậc: 50
+## 2. Technologies Used  
 
-## 2. Công nghệ sử dụng
+- **MATLAB**: Signal design and analysis.  
+- **Verilog**: Hardware description of the filter.  
+- **Vivado**: Simulation and testing.  
+- **GOWIN**: FPGA programming.  
 
-- **MATLAB**: Thiết kế và phân tích tín hiệu.
-- **Verilog**: Mô tả phần cứng bộ lọc.
-- **Vivado**: Mô phỏng và kiểm tra.
-- **GOWIN**: Nạp vào FPGA.
+## 3. Design Process  
 
-## 3. Quy trình thiết kế
-
-1. Tính toán hệ số FIR/IIR trong MATLAB.
-2. Triển khai FIR/IIR trên FPGA TangNano9k bằng Verilog.
-3. Mô phỏng tín hiệu đầu vào/đầu ra.
-4. Đánh giá hiệu năng hệ thống.
+1. Calculate FIR/IIR coefficients using MATLAB.  
+2. Implement FIR/IIR on the TangNano9k FPGA using Verilog.  
+3. Simulate input/output signals.  
+4. Evaluate system performance.  
