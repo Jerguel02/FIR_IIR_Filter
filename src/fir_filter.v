@@ -26,14 +26,12 @@ always @(posedge clk or posedge reset) begin
             buffer[i] <= 0;
         end
     end else begin
-        // Cập nhật buffer
         buffer[0] <= x;
         for (i = 1; i < N; i = i + 1) begin
             $display("i = %d, buffer[%d] = %d", i, i, buffer[i]);
             buffer[i] <= buffer[i-1];
         end
 
-        // Tính toán đầu ra
         acc = 0;
         for (i = 0; i < N; i = i + 1) begin
             acc = acc + buffer[i] * coeff[i];
